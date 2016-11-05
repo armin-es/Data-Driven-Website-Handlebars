@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/armin-es/data-driven-website-handlebars/issues"
   },
-  "homepage": "https://github.com/armin-es/data-driven-website-handlebars#readme"
+  "homepage": "https://github.com/armin-es/data-driven-website-handlebars#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
