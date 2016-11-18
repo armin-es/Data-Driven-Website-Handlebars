@@ -7,3 +7,7 @@
 .crop-img:hover {
     filter: grayscale(0%);
 }
+
+.panel-footer {
+    font-weight: bold;
+}
