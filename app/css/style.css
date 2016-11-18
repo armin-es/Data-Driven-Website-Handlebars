@@ -1,1 +1,5 @@
-/* stylesheet code goes here */
+.crop-img {
+    max-height:400px;
+    max-width:100%;
+    filter: grayscale(100%);
+}
