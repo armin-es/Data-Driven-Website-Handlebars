@@ -3,3 +3,7 @@
     max-width:100%;
     filter: grayscale(100%);
 }
+
+.crop-img:hover {
+    filter: grayscale(0%);
+}
