@@ -14,6 +14,9 @@ $(document).ready(function(){
     $("#home-tab").click(function(){
         useTemplate(countries_template, data);
 
+        $(".countries-thumbnail").click(function() {
+        // TODO: Add interactivty to first level data: when click on 'countries' the information for cities is displayed
+        });
     });
 
     $("#home-tab").click();
