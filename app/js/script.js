@@ -18,6 +18,7 @@ $(document).ready(function(){
             var index = $(this).data("id");
             current_countries = data.countries[index];
 
+            useTemplate(cities_template, current_countries);
         });
     });
 
