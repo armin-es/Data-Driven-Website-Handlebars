@@ -1,4 +1,4 @@
-var countries_template, cities_template;
+var countries_template, cities_template, current_countries;
 
 function useTemplate(template, data) {
     var html = template(data);
@@ -16,6 +16,8 @@ $(document).ready(function(){
 
         $(".countries-thumbnail").click(function() {
             var index = $(this).data("id");
+            current_countries = data.countries[index];
+
         });
     });
 
