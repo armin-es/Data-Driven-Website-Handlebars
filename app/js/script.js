@@ -9,4 +9,7 @@ $(document).ready(function(){
     countries_template = Handlebars.compile(source);
     useTemplate(countries_template, data);
 
+    source = $("#cities-template").html();
+    cities_template = Handlebars.compile(source);
+
 });
