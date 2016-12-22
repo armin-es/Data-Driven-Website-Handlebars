@@ -14,16 +14,17 @@
     <body>
         <div class="container">
 
-            <div class="page-header">
+            <header class="page-header">
                 <h1>Places to Visit</h1>
-            </div>
-
-            <ul class="nav nav-tabs">
-                <li class="active"><a id="home-tab" href="#">Home</a></li>
-            </ul>
-            <div class="container-fluid" id="content">
+            </header>
+            <nav>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a id="home-tab" href="#">Home</a></li>
+                </ul>
+            </nav>
+            <section class="container-fluid" id="content">
                 <!-- Filled via JavaScript and templates -->
-            </div>
+            </section>
 
         </div>
 
@@ -32,39 +33,43 @@
         <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
 
         <script type="text/x-handlebars-template" id="countries-template">
-            <div class="row">
+            <section class="row">
                 <br>
                 {{#each countries}}
                 <div class="col-xs-12 col-md-4">
-                    <div class="countries-thumbnail panel panel-default" data-id={{@index}}>
-                        <div class="panel-body">
+                    <article class="countries-thumbnail panel panel-default" data-id={{@index}}>
+                        <figure class="panel-body">
                             <img class="crop-img" src="{{thumbnail}}">
-                        </div>
+                        </figure>
 
-                        <div class="panel-footer">{{name}}
-                        </div>
-                    </div>
+                        <footer class="panel-footer">{{name}}
+                        </footer>
+                    </article>
                 </div>
                 {{/each}}
-            </div>
+            </section>
         </script>
 
         <script type="text/x-handlebars-template" id="cities-template">
-            <h2>{{name}}</h2>
+            <section>
+                <header>
+                    <h2>{{name}}</h2>
+                </header>
 
-            <div class="row">
-                {{#each cities}}
-                <div class="col-xs-12 col-md-6">
-                    <div class="countries-thumbnail panel panel-default">
-                         <div class="panel-body">
-                            <a href="{{thumbnail}}"><img class="crop-img" src="{{thumbnail}}"></a>
-                        </div>
-                        <div class="panel-footer"> {{name}}
-                        </div>
+                <div class="row">
+                    {{#each cities}}
+                    <div class="col-xs-12 col-md-6">
+                        <article class="countries-thumbnail panel panel-default">
+                             <div class="panel-body">
+                                <a href="{{thumbnail}}"><img class="crop-img" src="{{thumbnail}}"></a>
+                            </div>
+                            <div class="panel-footer"> {{name}}
+                            </div>
+                        </article>
                     </div>
+                    {{/each}}
                 </div>
-                {{/each}}
-            </div>
+            </section>
         </script>
 
         <script src="js/data.js"></script>
