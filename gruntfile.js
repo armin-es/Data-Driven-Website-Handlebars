@@ -22,12 +22,13 @@ module.exports = function(grunt) {
             }
         },
 
-        // uglify: {
-        //     ugly: {
-        //         src: 'dist/js/script.min.js',
-        //         dest: 'dist/js/script.min.js'
-        //     }
-        // },
+        uglify: {
+            my_target: {
+                files: {
+                    'dist/js/script.min.js': ['dist/js/script.js']
+                }
+            }
+        },
 
         // cssmin: {
         //     options: {
@@ -60,12 +61,12 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     // grunt.loadNpmTasks('grunt-contrib-cssmin');
     // grunt.loadNpmTasks('grunt-processhtml');
     // grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
     // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml', 'copy']);
 
 };
