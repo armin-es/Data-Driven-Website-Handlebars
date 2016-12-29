@@ -45,13 +45,13 @@ module.exports = function(grunt) {
             }
         },
 
-        // processhtml: {
-        //     replaceScriptLinks: {
-        //         files: {
-        //             './dist/index.html': ['./app/index.html']
-        //         }
-        //     }
-        // },
+        processhtml: {
+            dist: {
+                files: {
+                    'dist/index.html': ['app/index.html']
+                }
+            }
+        },
 
         // copy: {
         //     main: {
@@ -67,10 +67,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    // grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-processhtml');
     // grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml']);
     // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'processhtml', 'copy']);
 
 };
