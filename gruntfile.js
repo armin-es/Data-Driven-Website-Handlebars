@@ -30,16 +30,20 @@ module.exports = function(grunt) {
             }
         },
 
-        // cssmin: {
-        //     options: {
-        //                 shorthandCompacting: false,
-        //                 roundingPrecision: -1
-        //     },
-        //     mytarget: {
-        //         src:'dist/css/style.min.css',
-        //         dest: 'dist/css/style.min.css'
-        //     }
-        // },
+        cssmin: {
+            options: {
+                keepSpecialComments: 0
+            },
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist/css',
+                    src: '*.css',
+                    dest: 'dist/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
 
         // processhtml: {
         //     replaceScriptLinks: {
@@ -62,11 +66,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    // grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     // grunt.loadNpmTasks('grunt-processhtml');
     // grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-    // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml', 'copy']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
+    // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'processhtml', 'copy']);
 
 };
