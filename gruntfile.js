@@ -45,6 +45,11 @@ module.exports = function(grunt) {
             }
         },
 
+        clean: {
+            js: ["dist/js/*.js", "!dist/js/*.min.js"],
+            css: ["dist/css/*.css", "!dist/css/*.min.css"]
+        },
+
         processhtml: {
             dist: {
                 files: {
@@ -67,9 +72,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'processhtml', 'copy']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'clean', 'processhtml', 'copy']);
 
 };
