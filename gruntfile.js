@@ -53,14 +53,14 @@ module.exports = function(grunt) {
             }
         },
 
-        // copy: {
-        //     main: {
-        //         cwd: 'app/img',
-        //         expand: true,
-        //         src:'*',
-        //         dest:'dist/img'
-        //     }
-        // },
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'app/img/',
+                src:'*',
+                dest:'dist/img/'
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -68,9 +68,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-processhtml');
-    // grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml']);
-    // grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'processhtml', 'copy']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'processhtml', 'copy']);
 
 };
