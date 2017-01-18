@@ -4,8 +4,6 @@
 
 An interactive image gallery website using JavaScript template [Handlebars](http://handlebarsjs.com/), to better organize the data and also to separate data from HTML code.
 
-Interactive and scrollable image gallery using JavaScript and jQuery to manipulate the HTML.
-
 This project is based on a peer graded assignment for the course [Responsive Web Design](https://www.coursera.org/learn/responsive-web-design)  given by the Goldsmiths, University of London at Coursera.
 
 ### APIs and libraries
@@ -23,6 +21,11 @@ This project is based on a peer graded assignment for the course [Responsive Web
 Start by clicking on the `index.html` file. Click on a thumbnail image to open the corresponding gallery. Click on 'home' button to go back to thumbnails.
 
 ![Demo gif](demo_gif/demo.gif)
+
+### Contributing
+`grunt watch`:
+- to 'lint' JS code using JSHint and 
+- to generate build files in `dist` folder
 
 ### License
 
