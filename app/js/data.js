@@ -8,7 +8,7 @@ var data = {
             cities: [
                 {
                     name:"Montreal",
-                    thumbnail:"https://source.unsplash.com/N6q6wtJ_mkA/800x450"
+                    thumbnail:"https://source.unsplash.com/n0PCzKGlszw/800x450"
                 },
                 {
                     name:"Toronto",
